@@ -6,14 +6,14 @@ This ECE457B-Project repository is for our ECE 457B course project code that is 
 ### Getting Started with Git for Noobs
 - To get started with this repo, clone the repo: `git clone https://github.com/FatsoTheFatCat/fydp.git`.
 - Create a new development branch: `git branch -b "name-of-new-branch"`.
-	- You may need to set up the reference between your local branch and the remote branch: `git remote add origin https://github.com/user/repo.git`
+	- You may need to set up the reference between your local branch and the remote branch: `git remote add origin https://github.com/user/repo.git`. Don't worry if this doesn't work, there is an alternative for the first time you push (see 3 bullets down).
 - At any point in time, if you want to check which files have been modified: `git status`
 	- You can see the changes for a specific file with: `git diff name-of-file`
-		- To exit the diff, click `q` then ENTER
+		- To exit the diff, click `q`
 - When you're ready to save, 
 	- Add all of the files that you've made changes: `git add name-of-file` for *each* file
 	- And commit them with a meaningful message: `git commit -m "message"`
-- To sync your local changes to this remote repo: `git push`
+- To sync your local changes to this remote repo: `git push`. Note that the first time you push (if your origin setup didn't work), then you'll need to set the upstream: `git push --set-upstream origin name-of-your-branch`
 
 ## Google Drive
 All documents that are not related to the code can be found in the [Google Drive folder](https://drive.google.com/drive/folders/1M1plBcnhegLwSaiPPLZklaQgRg5EIrXn). 
