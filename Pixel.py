@@ -1,4 +1,4 @@
-from Rbg import Rgb
+from Rgb import Rgb
 
 # The Pixel class is simply a structure used to hold the information associated with an image pixel together in an object
 

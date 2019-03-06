@@ -31,7 +31,7 @@ class Rgb:
 		return self.red;
 
 	def setRed(r):
-		if (r >= 0 && r <= 255):
+		if (r >= 0 and r <= 255):
 			self.red = r;
 			return True;
 			
@@ -41,7 +41,7 @@ class Rgb:
 		return self.green;
 
 	def setGreen(g):
-		if (g >= 0 && g <= 255):
+		if (g >= 0 and g <= 255):
 			self.green = g;
 			return True;
 			
@@ -51,7 +51,7 @@ class Rgb:
 		return self.blue;
 
 	def setBlue(b):
-		if (b >= 0 && b <= 255):
+		if (b >= 0 and b <= 255):
 			self.blue = b;
 			return True;
 
