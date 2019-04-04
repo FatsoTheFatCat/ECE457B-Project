@@ -20,7 +20,7 @@ with open('frameAnnotationsBOX.csv') as csv_file:
 			
                         # get image size
                         # img = cv2.imread(os.path.join(os.getcwd(), row[0]))
-                        ab_path = os.path.realpath("{}.jpg".format(name))
+                        ab_path = os.path.realpath("{}.png".format(name))
                         img = cv2.imread(ab_path)
                         width, height, channels = img.shape
 
@@ -54,8 +54,8 @@ with open('frameAnnotationsBOX.csv') as csv_file:
 		line_count += 1
 
 # create any missing text files
-for jpg in glob.glob("dayTraining/*.jpg"):
-	name, ext = os.path.splitext(jpg)
+for png in glob.glob("dayTraining/*.png"):
+	name, ext = os.path.splitext(png)
 	if not (glob.glob("{}.txt".format(name))):
 		txt = open("{}.txt".format(name), 'w')
 		txt.close()
