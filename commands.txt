@@ -1,0 +1,22 @@
+# Start the X-server display 1
+
+
+# Write display 1 to image.png
+import -display :1 -window root image.png
+import -display :1 -window root output/image.png
+
+# Run YOLO on trafficlights/intersection.png
+DISPLAY=:1 python yolo.py --image trafficlights/intersection.png --yolo yolo-coco
+DISPLAY=:1 python orig-yolo.py --image images/soccer.jpg --yolo yolo-coco
+
+# !!! Run this one !!!
+xvfb-run -a python yolo-no-wait.py --image trafficlights/intersection.png --yolo yolo-coco
+
+# Open folder on server localhost:8080
+python -m SimpleHTTPServer 8080
+
+# Make a copy of all png images and convert to jpg
+mogrify -format jpg *.png
+
+# find all png in folder
+find . -type f -iname \*.png
